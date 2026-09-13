@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>■■■■■■</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <main class="mobile-screen" id="mobileScreen">
+
+        <!-- ========================================
+             수묵화
+        ======================================== -->
+
+        <section class="painting-area" id="paintingArea">
+
+            <!-- 기본 선비 그림 -->
+            <img src="images/scholar-painting.png" alt="선비가 그려진 수묵화" class="painting" id="painting">
+
+            <!-- 마지막 장면 배경 -->
+            <img src="images/background.png" alt="" class="painting background-painting" id="backgroundPainting">
+
+            <img src="images/true.png" alt="" class="painting true-painting" id="truePainting">
+
+        </section>
+
+
+        <!-- ========================================
+             일반 대화창
+        ======================================== -->
+
+        <section class="dialogue-box" id="dialogueBox">
+
+            <div class="dialogue-name" id="dialogueName"></div>
+
+            <div class="dialogue-text" id="dialogueText"></div>
+
+        </section>
+
+
+        <!-- ========================================
+             선택지
+        ======================================== -->
+
+        <div class="choice-box hidden" id="choiceBox">
+
+            <button type="button" class="choice-button" id="talkChoice">
+                대화한다
+            </button>
+
+            <button type="button" class="choice-button" id="ignoreChoice">
+                대화하지 않는다
+            </button>
+
+        </div>
+
+        <div class="choice-box hidden" id="endingChoiceBox">
+            <button type="button" class="choice-button" id="askJ3Choice">
+                J3에게 부탁한다
+            </button>
+
+            <button type="button" class="choice-button" id="revealChoice">
+                ■■■의 정체를 밝힌다
+            </button>
+        </div>
+
+        <div class="answer-box hidden" id="revealAnswerBox">
+            <div class="answer-question">
+                ■■■의 이름은 무엇인가?
+            </div>
+
+            <input type="text" id="revealAnswerInput" class="answer-input" autocomplete="off" spellcheck="false">
+
+            <button type="button" id="revealAnswerButton" class="answer-button">
+                확인
+            </button>
+
+            <div id="revealAnswerMessage" class="answer-message"></div>
+        </div>
+
+
+        <!-- ========================================
+             선비 얼굴 등장
+        ======================================== -->
+
+        <section class="face-reveal" id="faceReveal">
+
+            <img src="images/scholar-painting.png" alt="" class="face-reveal-image">
+
+            <div class="face-reveal-dark"></div>
+
+        </section>
+
+
+        <!-- ========================================
+             본격적인 선비 대화
+        ======================================== -->
+
+        <section class="scholar-scene" id="scholarScene">
+
+            <img src="images/scholar-painting.png" alt="" class="scholar-background">
+
+            <div class="scholar-dark"></div>
+
+            <section class="dialogue-box scholar-dialogue" id="scholarDialogue">
+
+                <div class="dialogue-name" id="scholarDialogueName"></div>
+
+                <div class="dialogue-text" id="scholarDialogueText"></div>
+
+            </section>
+
+        </section>
+
+
+        <!-- ========================================
+             종료 화면
+        ======================================== -->
+
+        <section class="ending-scene" id="endingScene">
+
+            <div class="ending-text" id="endingText">
+                탐사를 종료합니다.
+            </div>
+
+        </section>
+
+        <section class="record-window" id="recordWindow">
+            <div class="record-window-header">
+                <span class="record-window-close" id="recordWindowClose">×</span>
+            </div>
+
+            <div class="record-window-body">
+                <div class="record-title">[虎視眈眈]</div>
+
+                <p>
+                    &lt;어둠탐사기록&gt;에 등장하는 괴담,
+                    초자연재난관리국의 등록번호는
+                    <strong>2026PSYA.2001.구13.</strong>
+                </p>
+
+                <p>
+                    예술가의 혼을 좇던 이들을 매료시켜,
+                    목숨마저 내걸게 만드는 괴담.
+                </p>
+
+                <p>
+                    초자연재난관리국의
+                    <strong>뇌형(櫴刑)급 재난</strong>으로 분류됨.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
