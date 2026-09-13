@@ -1777,7 +1777,7 @@ let offeringScene = null;
 
 const offeringNames = [
 
-    "김솔음"
+    "김솔음",
     "김경원",
     "김승찬",
     "김찬결",
