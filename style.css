@@ -60,7 +60,7 @@ body {
     position: relative;
 
     width: 390px;
-    height: 844px;
+    height: 100dvh;
 
     overflow: hidden;
 
@@ -217,8 +217,7 @@ body {
     background: rgba(0, 0, 0, 0.88);
 
     border-top:
-        1px solid
-        rgba(255, 255, 255, 0.15);
+        1px solid rgba(255, 255, 255, 0.15);
 
     color: #fff;
 
@@ -240,10 +239,7 @@ body {
     opacity: 1;
 
     animation:
-        dialogue-fade-in
-        1.0s
-        ease-out
-        forwards;
+        dialogue-fade-in 1.0s ease-out forwards;
 }
 
 
@@ -339,8 +335,7 @@ body {
     padding: 12px 20px;
 
     border:
-        1px solid
-        rgba(255, 255, 255, 0.55);
+        1px solid rgba(255, 255, 255, 0.55);
 
     border-radius: 3px;
 
@@ -419,10 +414,7 @@ body {
     pointer-events: auto;
 
     animation:
-        face-reveal-in
-        0.35s
-        ease-out
-        forwards;
+        face-reveal-in 0.35s ease-out forwards;
 }
 
 
@@ -443,10 +435,7 @@ body {
     transform: scale(26);
 
     animation:
-        face-lunge
-        1.0s
-        cubic-bezier(0.15, 0.8, 0.25, 1)
-        forwards;
+        face-lunge 1.0s cubic-bezier(0.15, 0.8, 0.25, 1) forwards;
 }
 
 
@@ -485,12 +474,10 @@ body {
     inset: 0;
 
     background:
-        radial-gradient(
-            circle at 58% 58%,
+        radial-gradient(circle at 58% 58%,
             transparent 0%,
             rgba(0, 0, 0, 0.12) 35%,
-            rgba(0, 0, 0, 0.55) 100%
-        );
+            rgba(0, 0, 0, 0.55) 100%);
 
     pointer-events: none;
 }
@@ -525,10 +512,7 @@ body {
     pointer-events: auto;
 
     animation:
-        scholar-scene-in
-        1.0s
-        ease-out
-        forwards;
+        scholar-scene-in 1.0s ease-out forwards;
 }
 
 
@@ -572,13 +556,11 @@ body {
     height: 585px;
 
     background:
-        linear-gradient(
-            to bottom,
+        linear-gradient(to bottom,
             rgba(0, 0, 0, 0.08) 0%,
             rgba(0, 0, 0, 0.05) 45%,
             rgba(0, 0, 0, 0.88) 70%,
-            rgba(0, 0, 0, 0.96) 100%
-        );
+            rgba(0, 0, 0, 0.96) 100%);
 
     pointer-events: none;
 }
@@ -810,10 +792,7 @@ button,
     filter: blur(8px);
 
     animation:
-        eternityTextAppear
-        1.1s
-        ease-out
-        forwards;
+        eternityTextAppear 1.1s ease-out forwards;
 }
 
 
@@ -880,10 +859,7 @@ button,
     filter: blur(8px);
 
     animation:
-        eternityTextAppear
-        1.1s
-        ease-out
-        forwards;
+        eternityTextAppear 1.1s ease-out forwards;
 }
 
 /* ==========================================================
@@ -973,16 +949,9 @@ button,
     display: block;
 
     animation:
-        ritualFirstAppear
-        0.8s
-        ease-out
-        forwards,
+        ritualFirstAppear 0.8s ease-out forwards,
 
-        ritualFirstShake
-        0.14s
-        linear
-        0.8s
-        18;
+        ritualFirstShake 0.14s linear 0.8s 18;
 }
 
 
@@ -1540,8 +1509,7 @@ button,
     pointer-events: auto;
 
     transform:
-        translate(-50%, -50%)
-        scale(1);
+        translate(-50%, -50%) scale(1);
 }
 
 .record-window-header {
