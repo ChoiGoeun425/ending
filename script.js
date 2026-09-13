@@ -1111,54 +1111,53 @@ dialogueBox.addEventListener(
 
         if (gameMode === "revealAnswerEnd") {
 
-            if (isTyping) {
-                finishTyping();
-                return;
-            }
+    if (isTyping) {
+        finishTyping();
+        return;
+    }
 
-            revealAnswerEndDialogueIndex++;
+    revealAnswerEndDialogueIndex++;
 
-            /*
-                아직 남은 대사가 있다면
-                다음 대사 출력
-            */
+    /*
+        아직 남은 대사가 있다면
+        다음 대사 출력
+    */
 
-            if (
-                revealAnswerEndDialogueIndex <
-                revealAnswerEndDialogues.length
-            ) {
+    if (
+        revealAnswerEndDialogueIndex <
+        trueEndDialogues.length
+    ) {
 
-                showRevealAnswerEndDialogue();
+        showRevealAnswerEndDialogue();
 
-                return;
-            }
-
-
-            /*
-                모든 대사가 끝남
-                → True End 그림 + 대사
-            */
-
-            trueEndDialogueIndex = 0;
+        return;
+    }
 
 
-            if (truePainting) {
-                truePainting.classList.add("show");
-            }
+    /*
+        모든 대사가 끝남
+        → True End 그림 + 대사
+    */
+
+    trueEndDialogueIndex = 0;
 
 
-            dialogueBox.classList.add("show");
-            dialogueBox.style.pointerEvents = "auto";
-            dialogueBox.style.zIndex = "10004";
+    if (truePainting) {
+        truePainting.classList.add("show");
+    }
 
 
-            gameMode = "trueEnd";
+    dialogueBox.classList.add("show");
+    dialogueBox.style.pointerEvents = "auto";
+    dialogueBox.style.zIndex = "10004";
 
-            showTrueEndDialogue();
 
-            return;
-        }
+    gameMode = "trueEnd";
 
+    showTrueEndDialogue();
+
+    return;
+}
         if (gameMode === "trueEnd") {
 
             if (isTyping) {
@@ -1778,11 +1777,11 @@ let offeringScene = null;
 
 const offeringNames = [
 
-    "김솔음",
-    "박가연",
-    "임지현",
-    "최세미",
-    "최우진",
+    "김솔음"
+    "김경원",
+    "김승찬",
+    "김찬결",
+    "정유진",
 
 ];
 
@@ -2543,6 +2542,8 @@ const trueEndDialogues = [
     }
 ];
 
+let trueEndDialogueIndex = 0;
+
 let revealAnswerEndDialogueIndex = 0;
 
 function showRevealAnswerEndDialogue() {
@@ -2572,15 +2573,19 @@ revealAnswerButton.addEventListener("click", function () {
 
         revealAnswerBox.classList.add("hidden");
 
-        revealAnswerEndDialogueIndex = 0;
+        trueEndDialogueIndex = 0;
 
-        dialogueBox.classList.add("show");
-        dialogueBox.style.pointerEvents = "auto";
-        dialogueBox.style.zIndex = "10004";
+if (truePainting) {
+    truePainting.classList.add("show");
+}
 
-        gameMode = "revealAnswerEnd";
+dialogueBox.classList.add("show");
+dialogueBox.style.pointerEvents = "auto";
+dialogueBox.style.zIndex = "10004";
 
-        showRevealAnswerEndDialogue();
+gameMode = "trueEnd";
+
+showTrueEndDialogue();
 
         return;
     }
